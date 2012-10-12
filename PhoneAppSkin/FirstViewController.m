@@ -66,34 +66,41 @@
 {
     NSLog(@"Number keypad button pressed.");
     self.phoneNumberString = [self.phoneNumberString stringByAppendingString:pressedButton.titleLabel.text];
+    [self displayPhoneNumber];
+}
+
+-(void)displayPhoneNumber
+{
     if([self.phoneNumberString length] >= 4 && [self.phoneNumberString length] <= 7)
     {
         NSRange  prefixRange   = {0, 3};
         NSString *prefixString = [self.phoneNumberString substringWithRange:prefixRange];
-        
         NSString *lineNumberString = [self.phoneNumberString substringFromIndex:3];
-        
         self.steven.text = [NSString stringWithFormat:@"%@-%@", prefixString, lineNumberString];
     }
     else if([self.phoneNumberString length] >= 8 && [self.phoneNumberString length] <= 10)
     {
         NSRange areaCodeRange = {0, 3};
         NSString *areaCodeString = [self.phoneNumberString substringWithRange:areaCodeRange];
-        
         NSRange prefixRange = {3, 3};
         NSString *prefixString = [self.phoneNumberString substringWithRange:prefixRange];
-        
         NSString *lineNumberString = [self.phoneNumberString substringFromIndex:6];
-        
         self.steven.text = [NSString stringWithFormat:@"(%@) %@-%@", areaCodeString, prefixString, lineNumberString];
-        
     }
     else
     {
         self.steven.text = self.phoneNumberString;
     }
-
-    
 }
+
+-(IBAction)deleteButtonPressed:(UIButton *)numberButton
+{
+    if([self.phoneNumberString length] > 0)
+    {
+        self.phoneNumberString = [self.phoneNumberString substringToIndex:([self.phoneNumberString length] - 1)];
+    }
+    [self displayPhoneNumber];
+}
+
 
 @end

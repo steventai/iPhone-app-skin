@@ -15,4 +15,6 @@
 -(IBAction)numberButtonPressed:(UIButton *)pressedButton;
 -(IBAction)deleteButtonPressed:(UIButton *)pressedButton;
 -(IBAction)dialButtonPressed:(UIButton *)pressedButton;
+
+-(void)displayPhoneNumber;
 @end
