@@ -10,7 +10,9 @@
 
 @interface FirstViewController : UIViewController
 
-@property (nonatomic, retain) IBOutlet UILabel *steven;
+@property (retain, nonatomic) IBOutlet UILabel *numlabel;
+
+
 @property(nonatomic, retain) NSString *phoneNumberString;
 -(IBAction)numberButtonPressed:(UIButton *)pressedButton;
 -(IBAction)deleteButtonPressed:(UIButton *)pressedButton;

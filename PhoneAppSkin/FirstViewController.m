@@ -13,7 +13,7 @@
 @end
 
 @implementation FirstViewController
-@synthesize steven;
+@synthesize numlabel;
 @synthesize phoneNumberString;
 
 -(id)initWithCoder:(NSCoder *)aDecoder
@@ -29,7 +29,9 @@
 
 - (void)viewDidUnload
 {
-    [self setSteven:nil];
+
+
+    [self setNumlabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -37,7 +39,8 @@
 
 - (void)dealloc {
     [phoneNumberString release];
-    [steven release];
+
+    [numlabel release];
     [super dealloc];
 }
 
@@ -76,7 +79,7 @@
         NSRange  prefixRange   = {0, 3};
         NSString *prefixString = [self.phoneNumberString substringWithRange:prefixRange];
         NSString *lineNumberString = [self.phoneNumberString substringFromIndex:3];
-        self.steven.text = [NSString stringWithFormat:@"%@-%@", prefixString, lineNumberString];
+        self.numlabel.text = [NSString stringWithFormat:@"%@-%@", prefixString, lineNumberString];
     }
     else if([self.phoneNumberString length] >= 8 && [self.phoneNumberString length] <= 10)
     {
@@ -85,11 +88,11 @@
         NSRange prefixRange = {3, 3};
         NSString *prefixString = [self.phoneNumberString substringWithRange:prefixRange];
         NSString *lineNumberString = [self.phoneNumberString substringFromIndex:6];
-        self.steven.text = [NSString stringWithFormat:@"(%@) %@-%@", areaCodeString, prefixString, lineNumberString];
+        self.numlabel.text = [NSString stringWithFormat:@"(%@) %@-%@", areaCodeString, prefixString, lineNumberString];
     }
     else
     {
-        self.steven.text = self.phoneNumberString;
+        self.numlabel.text = self.phoneNumberString;
     }
 }
 

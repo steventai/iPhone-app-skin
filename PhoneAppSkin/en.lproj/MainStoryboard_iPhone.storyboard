@@ -207,19 +207,19 @@
                                     <action selector="numberButtonPressed:" destination="2" eventType="touchUpInside" id="pSl-NF-4t7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="UpT-Bz-eOG">
-                                <rect key="frame" x="50" y="20" width="228" height="50"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lXs-IH-gxq">
+                                <rect key="frame" x="44" y="20" width="253" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="7"/>
+                    <tabBarItem key="tabBarItem" title="Dial" image="first.png" id="7"/>
                     <connections>
-                        <outlet property="steven" destination="UpT-Bz-eOG" id="RiQ-br-cKS"/>
+                        <outlet property="numlabel" destination="lXs-IH-gxq" id="a7H-rM-eXq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
@@ -235,7 +235,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="6"/>
+                    <tabBarItem key="tabBarItem" title="Contrast" image="first.png" id="6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
@@ -262,7 +262,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="16" height="16"/>
+        <image name="first.png" width="30" height="30"/>
         <image name="phone-down0914_0.png" width="160" height="144"/>
         <image name="phone-down0914_01.png" width="160" height="144"/>
         <image name="phone-down0914_02.png" width="160" height="144"/>
@@ -288,8 +288,21 @@
         <image name="phone-up0914_9.png" width="160" height="144"/>
         <image name="phone-up0914_A.png" width="160" height="144"/>
         <image name="phone-up0914_B.png" width="160" height="144"/>
-        <image name="second" width="16" height="16"/>
     </resources>
+    <classes>
+        <class className="ContrastController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContrastController.h"/>
+        </class>
+        <class className="FirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="deleteButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="dialButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="numberButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="numlabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
