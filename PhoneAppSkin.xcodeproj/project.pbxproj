@@ -20,7 +20,6 @@
 		181739AA15F76EC0002FCBDF /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181739A915F76EC0002FCBDF /* FirstViewController.m */; };
 		181739AC15F76EC0002FCBDF /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 181739AB15F76EC0002FCBDF /* first.png */; };
 		181739AE15F76EC0002FCBDF /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 181739AD15F76EC0002FCBDF /* first@2x.png */; };
-		181739B115F76EC0002FCBDF /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181739B015F76EC0002FCBDF /* SecondViewController.m */; };
 		181739BD15F76EC0002FCBDF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181739BC15F76EC0002FCBDF /* SenTestingKit.framework */; };
 		181739BE15F76EC0002FCBDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1817399015F76EBF002FCBDF /* UIKit.framework */; };
 		181739BF15F76EC0002FCBDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1817399215F76EBF002FCBDF /* Foundation.framework */; };
@@ -82,8 +81,6 @@
 		181739A915F76EC0002FCBDF /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		181739AB15F76EC0002FCBDF /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		181739AD15F76EC0002FCBDF /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		181739AF15F76EC0002FCBDF /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		181739B015F76EC0002FCBDF /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		181739BB15F76EC0002FCBDF /* PhoneAppSkinTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneAppSkinTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		181739BC15F76EC0002FCBDF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		18CCECD91626B6EA005D0692 /* phone-down0914_A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone-down0914_A.png"; sourceTree = "<group>"; };
@@ -181,8 +178,6 @@
 				18066F5A16070BC500D59B43 /* ContrastController.m */,
 				181739AB15F76EC0002FCBDF /* first.png */,
 				181739AD15F76EC0002FCBDF /* first@2x.png */,
-				181739AF15F76EC0002FCBDF /* SecondViewController.h */,
-				181739B015F76EC0002FCBDF /* SecondViewController.m */,
 				18747429160725B6006E2D58 /* Image */,
 				1817399715F76EBF002FCBDF /* Supporting Files */,
 			);
@@ -373,7 +368,6 @@
 				1817399D15F76EBF002FCBDF /* main.m in Sources */,
 				181739A115F76EBF002FCBDF /* AppDelegate.m in Sources */,
 				181739AA15F76EC0002FCBDF /* FirstViewController.m in Sources */,
-				181739B115F76EC0002FCBDF /* SecondViewController.m in Sources */,
 				18066F5B16070BC500D59B43 /* ContrastController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +475,7 @@
 				GCC_PREFIX_HEADER = "PhoneAppSkin/PhoneAppSkin-Prefix.pch";
 				INFOPLIST_FILE = "PhoneAppSkin/PhoneAppSkin-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -492,6 +487,7 @@
 				GCC_PREFIX_HEADER = "PhoneAppSkin/PhoneAppSkin-Prefix.pch";
 				INFOPLIST_FILE = "PhoneAppSkin/PhoneAppSkin-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
